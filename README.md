@@ -1,4 +1,4 @@
-# Britecyte preview (`coptest`)
+# Britecyte preview (`copytest`)
 
 Team preview and reusable static-site test repository. It intentionally has no
 `CNAME`, so publishing this repository cannot replace the live britecyte.com
