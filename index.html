@@ -6,7 +6,7 @@
   <title>Britecyte — Biorestoration Therapies</title>
   <meta name="description" content="Britecyte develops innovative therapies designed to restore structure, function, and quality of life by working with the body's natural biology." />
   <link rel="preload" as="image" href="assets/logos/britecyte-logo.png" />
-  <link rel="stylesheet" href="css/styles.css?v=20260722k" />
+  <link rel="stylesheet" href="css/styles.css?v=20260818a" />
 </head>
 <body>
   <div class="site-surface">
@@ -22,6 +22,7 @@
           <a href="#products">Products</a>
           <a href="#platform">Science</a>
           <a href="#news">News</a>
+          <a href="#team">Team</a>
           <a href="#contact">Contact</a>
         </nav>
         <div class="site-header-actions">
@@ -40,6 +41,7 @@
         <a href="#products">Products</a>
         <a href="#platform">Science</a>
         <a href="#news">News</a>
+        <a href="#team">Team</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -301,16 +303,11 @@
         </div>
       </section>
 
-      <!-- Team & Contact -->
-      <section id="contact" class="section section-cream section-motif-host section-with-photo team-contact-section" data-motif-key="contact">
-        <div class="products-bg" aria-hidden="true">
-          <div class="products-bg-frame">
-            <img src="assets/products/lipoderma-10cc-jar-45.jpg" alt="" class="products-bg-photo" width="1280" height="1600" />
-          </div>
-        </div>
+      <!-- Team -->
+      <section id="team" class="section section-cream section-motif-host" data-motif-key="team">
         <div class="container">
           <div class="section-header reveal">
-            <h2 class="section-title font-display">Meet the team. <span class="text-bronze-deep">Get in touch.</span></h2>
+            <h2 class="section-title font-display">Meet the team.</h2>
           </div>
           <div class="team-grid reveal">
                 <article class="team-card surface" tabindex="0">
@@ -374,7 +371,19 @@
                   </div>
                 </article>
               </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section section-cream section-motif-host section-with-photo" data-motif-key="contact">
+        <div class="products-bg" aria-hidden="true">
+          <div class="products-bg-frame">
+            <img src="assets/products/lipoderma-10cc-jar-45.jpg" alt="" class="products-bg-photo" width="1280" height="1600" />
+          </div>
+        </div>
+        <div class="container">
             <div class="contact-block reveal reveal-delay-1">
+              <h2 class="section-title font-display">Get in touch.</h2>
               <form class="contact-form surface surface-lg" data-contact-form action="https://formsubmit.co/ajax/642cc79bd5eb946f4aec9631167a6878" method="POST">
                 <input type="hidden" name="_subject" value="Britecyte website contact form" />
                 <input type="hidden" name="_template" value="table" />
@@ -390,7 +399,13 @@
                 </div>
                 <div class="form-row">
                   <label class="form-label microtype" for="contact-subject">Subject</label>
-                  <input type="text" id="contact-subject" name="subject" class="form-input" placeholder="How can we help?" />
+                  <select id="contact-subject" name="subject" class="form-input">
+                    <option value="product-lipoderma">Product Inquiry - Lipoderma</option>
+                    <option value="product-liposana">Product Inquiry - Liposana</option>
+                    <option value="clinical">Clinical / physician</option>
+                    <option value="media">Media</option>
+                    <option value="partnership">Partnership</option>
+                  </select>
                 </div>
                 <div class="form-row">
                   <label class="form-label microtype" for="contact-message">Message</label>
