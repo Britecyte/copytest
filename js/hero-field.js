@@ -74,6 +74,8 @@ export function initHeroField() {
 function bindHeroFieldPlay(host, cells) {
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const groups = [...host.querySelectorAll(".hf-adipo")];
+  const svg = host.querySelector(".hero-field-svg");
+  const hero = host.closest(".hero") || host;
 
   const replay = (el, cls) => {
     if (!el) return;
@@ -101,10 +103,38 @@ function bindHeroFieldPlay(host, cells) {
     });
   };
 
-  groups.forEach((group, i) => {
-    group.addEventListener("pointerdown", (event) => {
-      event.preventDefault();
-      poke(i);
+  const pointFromEvent = (event) => {
+    if (!svg) return null;
+    const ctm = svg.getScreenCTM();
+    if (!ctm) return null;
+    const pt = svg.createSVGPoint();
+    pt.x = event.clientX;
+    pt.y = event.clientY;
+    return pt.matrixTransform(ctm.inverse());
+  };
+
+  const nearest = (x, y) => {
+    let best = 0;
+    let bestD = Infinity;
+    cells.forEach((cell, i) => {
+      const d = Math.hypot(cell.x - x, cell.y - y);
+      if (d < bestD) {
+        bestD = d;
+        best = i;
+      }
     });
-  });
+    return best;
+  };
+
+  const onPlay = (event) => {
+    if (event.target.closest("a, button, input, textarea, select, label")) return;
+    const mobile = window.matchMedia("(max-width: 1023px)").matches;
+    if (!mobile && !event.target.closest("[data-hero-field], .hero-visual")) return;
+    const pt = pointFromEvent(event);
+    if (!pt) return;
+    event.preventDefault();
+    poke(nearest(pt.x, pt.y));
+  };
+
+  hero.addEventListener("pointerdown", onPlay);
 }
