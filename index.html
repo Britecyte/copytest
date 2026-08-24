@@ -10,7 +10,6 @@
     .picker { position: sticky; top: 0; z-index: 2; display: flex; gap: 8px; flex-wrap: wrap; padding: 12px 16px; background: #0e2652; }
     .picker a { color: #fff; text-decoration: none; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; padding: 8px 10px; border: 1px solid #ffffff33; border-radius: 8px; }
     .picker a:hover { background: #1e448c; }
-    .picker a.is-unused { color: #ffe566; border-color: #ffe56666; }
     .label { max-width: 560px; margin: 28px auto 8px; font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #4a5470; }
     .note { max-width: 560px; margin: 0 auto 24px; font-size: 13px; color: #4a5470; }
     .page { max-width: 640px; margin: 0 auto; }
@@ -28,20 +27,18 @@
   <nav class="picker">
     <a href="#reset">Password reset</a>
     <a href="#invite">Account invitation</a>
-    <a href="#approved">Ordering approved</a>
-    <a href="#ordering-issue">Ordering needs attention</a>
+    <a href="#approved">Account approved</a>
     <a href="#confirmation">Order confirmation</a>
     <a href="#fulfillment">Fulfillment</a>
     <a href="#tracking">Tracking</a>
-    <a href="#problem">Needs attention</a>
+    <a href="#delay">Order delay</a>
     <a href="#bank">Tissue-bank packet</a>
     <a href="#ops-order">Staff · new order</a>
     <a href="#new-provider">Staff · new account</a>
-    <a href="#delivery" class="is-unused">Delivery update</a>
   </nav>
 
   <p class="note" style="margin-top:20px;">
-    White nav items are emails Launchpad sends. Yellow items are unused drafts. Confirmation sends when payment is received. Fulfillment sends when the order goes to the tissue bank. Tracking sends only when a tracking number is recorded.
+    These are the emails Launchpad sends. Confirmation sends when payment is received. Fulfillment sends when the order goes to the tissue bank. Tracking sends only when a tracking number is recorded. Delay is sent from the staff order page.
   </p>
 
   <div class="page">
@@ -131,7 +128,7 @@
   </div>
 
   <div class="page">
-    <p class="label" id="approved">Ordering approved</p>
+    <p class="label" id="approved">Account approved</p>
     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#f9fbff;">
       <tr>
         <td align="center" style="padding:28px 12px;">
@@ -144,41 +141,9 @@
             </tr>
             <tr>
               <td style="background-color:#ffffff;padding:28px;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;color:#233051;font-size:16px;line-height:1.55;">
-                <p style="margin:0 0 8px;font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#fd893c;">Ordering approved</p>
+                <p style="margin:0 0 8px;font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#fd893c;">Account approved</p>
                 <p style="margin:0 0 14px;font-size:22px;font-weight:700;letter-spacing:-0.03em;line-height:1.25;color:#233051;">Hi Alex,</p>
-                <p style="margin:0 0 16px;color:#4a5470;">Your Lipoderma ordering account for Example Aesthetics is approved. You can now place orders.</p>
-                <p style="margin:24px 0 0;font-size:15px;line-height:1.5;color:#4a5470;">Thank you.</p>
-              </td>
-            </tr>
-            <tr>
-              <td style="background-color:#f9fbff;padding:18px 28px;border-top:1px solid #e1e7ff;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;font-size:12px;line-height:1.5;color:#4a5470;">
-                Britecyte · Lipoderma Orders<br>
-                <a href="mailto:needthefat@britecyte.com" style="color:#1e448c;text-decoration:none;">needthefat@britecyte.com</a>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-  </div>
-
-  <div class="page">
-    <p class="label" id="ordering-issue">Ordering needs attention</p>
-    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#f9fbff;">
-      <tr>
-        <td align="center" style="padding:28px 12px;">
-          <table role="presentation" width="560" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:560px;border:1px solid #e1e7ff;border-radius:12px;overflow:hidden;background-color:#ffffff;">
-            <tr>
-              <td style="background-color:#ffffff;padding:22px 28px 18px;border-bottom:3px solid #fd893c;">
-                <img src="assets/logos/lipoderma-logo.svg" alt="Lipoderma" width="140" height="34" style="display:block;border:0;height:34px;width:140px;">
-                <p style="margin:10px 0 0;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#4a5470;">Provider Portal</p>
-              </td>
-            </tr>
-            <tr>
-              <td style="background-color:#ffffff;padding:28px;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;color:#233051;font-size:16px;line-height:1.55;">
-                <p style="margin:0 0 8px;font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#fd893c;">Needs attention</p>
-                <p style="margin:0 0 14px;font-size:22px;font-weight:700;letter-spacing:-0.03em;line-height:1.25;color:#233051;">Hi Alex,</p>
-                <p style="margin:0 0 16px;color:#4a5470;">Your Lipoderma ordering account for Example Aesthetics needs attention before ordering can continue. Our staff will follow up with next steps.</p>
+                <p style="margin:0 0 16px;color:#4a5470;">Your Lipoderma Launchpad account for Example Aesthetics is approved. You can now place orders.</p>
                 <p style="margin:24px 0 0;font-size:15px;line-height:1.5;color:#4a5470;">Thank you.</p>
               </td>
             </tr>
@@ -213,19 +178,31 @@
                 <p style="margin:0 0 20px;color:#4a5470;">We have order #1842. We will email you again when it is sent to our tissue-bank partner.</p>
                 <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-top:1px solid #e1e7ff;border-bottom:1px solid #e1e7ff;">
                   <tr>
-                    <td style="padding:10px 0;color:#4a5470;width:148px;vertical-align:top;">Products</td>
-                    <td style="padding:10px 0;color:#233051;">
-                      <div style="margin:0 0 4px;">2× Lipoderma · 1.5cc vial</div>
-                      <div style="margin:0 0 4px;">1× Lipoderma · 1.5cc vial (complimentary)</div>
+                    <td style="padding:10px 12px 2px 0;color:#233051;vertical-align:top;">
+                      2× Lipoderma · 1.5cc vial
+                      <div style="margin:2px 0 0;font-size:13px;color:#4a5470;">$450.00 each</div>
                     </td>
+                    <td style="padding:10px 0 2px;color:#233051;text-align:right;white-space:nowrap;vertical-align:top;">$900.00</td>
                   </tr>
                   <tr>
-                    <td style="padding:10px 0;color:#4a5470;">Shipping</td>
-                    <td style="padding:10px 0;color:#233051;">FedEx Priority Overnight</td>
+                    <td style="padding:10px 12px 2px 0;color:#233051;vertical-align:top;">1× Lipoderma · 1.5cc vial (complimentary)</td>
+                    <td style="padding:10px 0 2px;color:#233051;text-align:right;white-space:nowrap;vertical-align:top;">$0.00</td>
                   </tr>
                   <tr>
-                    <td style="padding:10px 0;color:#4a5470;">Requested delivery</td>
-                    <td style="padding:10px 0;color:#233051;">Tuesday, August 18, 2026</td>
+                    <td style="padding:12px 12px 6px 0;color:#4a5470;">Subtotal</td>
+                    <td style="padding:12px 0 6px;color:#233051;text-align:right;white-space:nowrap;">$900.00</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:6px 12px 6px 0;color:#4a5470;">Shipping · FedEx Priority Overnight</td>
+                    <td style="padding:6px 0;color:#233051;text-align:right;white-space:nowrap;">$100.00</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:10px 12px 10px 0;font-weight:700;color:#233051;">Total paid</td>
+                    <td style="padding:10px 0;font-weight:700;color:#233051;text-align:right;white-space:nowrap;">$1,000.00</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:10px 12px 10px 0;color:#4a5470;border-top:1px solid #e1e7ff;">Requested delivery</td>
+                    <td style="padding:10px 0;color:#233051;text-align:right;border-top:1px solid #e1e7ff;">Tuesday, August 18, 2026</td>
                   </tr>
                 </table>
                 <p style="margin:24px 0 0;font-size:15px;line-height:1.5;color:#4a5470;">Thank you.</p>
@@ -335,7 +312,7 @@
   </div>
 
   <div class="page">
-    <p class="label" id="problem">Needs attention</p>
+    <p class="label" id="delay">Order delay · sent from the staff order page</p>
     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#f9fbff;">
       <tr>
         <td align="center" style="padding:28px 12px;">
@@ -348,9 +325,9 @@
             </tr>
             <tr>
               <td style="background-color:#ffffff;padding:28px;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;color:#233051;font-size:16px;line-height:1.55;">
-                <p style="margin:0 0 8px;font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#fd893c;">Needs attention</p>
-                <p style="margin:0 0 14px;font-size:22px;font-weight:700;letter-spacing:-0.03em;line-height:1.25;color:#233051;">We need to confirm the shipping address for your order.</p>
-                <p style="margin:0 0 20px;color:#4a5470;">The address attached to your order didn't match the one we had on file. Please reply to this email with your shipping address so we can make sure your order gets to the right place.</p>
+                <p style="margin:0 0 8px;font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#fd893c;">Order update</p>
+                <p style="margin:0 0 14px;font-size:22px;font-weight:700;letter-spacing:-0.03em;line-height:1.25;color:#233051;">There is a delay with your Lipoderma order.</p>
+                <p style="margin:0 0 20px;color:#4a5470;">We are working with our fulfillment partner and will update you as soon as we have a revised delivery timeline.</p>
                 <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-top:1px solid #e1e7ff;border-bottom:1px solid #e1e7ff;">
                   <tr>
                     <td style="padding:10px 0;color:#4a5470;width:148px;">Order</td>
@@ -541,52 +518,6 @@
                   </tr>
                 </table>
                 <p style="margin:20px 0 0;color:#4a5470;">Review the account before approving ordering.</p>
-              </td>
-            </tr>
-            <tr>
-              <td style="background-color:#f9fbff;padding:18px 28px;border-top:1px solid #e1e7ff;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;font-size:12px;line-height:1.5;color:#4a5470;">
-                Britecyte · Lipoderma Orders<br>
-                <a href="mailto:needthefat@britecyte.com" style="color:#1e448c;text-decoration:none;">needthefat@britecyte.com</a>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-  </div>
-
-  <div class="page">
-    <p class="label" id="delivery">Delivery update · unused, not sent</p>
-    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#f9fbff;">
-      <tr>
-        <td align="center" style="padding:28px 12px;">
-          <table role="presentation" width="560" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:560px;border:1px solid #e1e7ff;border-radius:12px;overflow:hidden;background-color:#ffffff;">
-            <tr>
-              <td style="background-color:#ffffff;padding:22px 28px 18px;border-bottom:3px solid #fd893c;">
-                <img src="assets/logos/lipoderma-logo.svg" alt="Lipoderma" width="140" height="34" style="display:block;border:0;height:34px;width:140px;">
-                <p style="margin:10px 0 0;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#4a5470;">Provider Portal</p>
-              </td>
-            </tr>
-            <tr>
-              <td style="background-color:#ffffff;padding:28px;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;color:#233051;font-size:16px;line-height:1.55;">
-                <p style="margin:0 0 8px;font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#fd893c;">Delivery update</p>
-                <p style="margin:0 0 14px;font-size:22px;font-weight:700;letter-spacing:-0.03em;line-height:1.25;color:#233051;">Your Lipoderma order is scheduled for delivery.</p>
-                <p style="margin:0 0 20px;color:#4a5470;">This draft is not sent. Tracking is the last clinic email Launchpad sends today.</p>
-                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-top:1px solid #e1e7ff;border-bottom:1px solid #e1e7ff;">
-                  <tr>
-                    <td style="padding:10px 0;color:#4a5470;width:148px;">Order</td>
-                    <td style="padding:10px 0;font-weight:600;color:#233051;">#1842</td>
-                  </tr>
-                  <tr>
-                    <td style="padding:10px 0;color:#4a5470;">Expected delivery</td>
-                    <td style="padding:10px 0;color:#233051;">Wednesday, August 19, 2026</td>
-                  </tr>
-                  <tr>
-                    <td style="padding:10px 0;color:#4a5470;">Tracking</td>
-                    <td style="padding:10px 0;color:#233051;">123456789012</td>
-                  </tr>
-                </table>
-                <p style="margin:24px 0 0;font-size:15px;line-height:1.5;color:#4a5470;">Thank you.</p>
               </td>
             </tr>
             <tr>

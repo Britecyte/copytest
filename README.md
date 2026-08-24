@@ -6,8 +6,8 @@ site.
 
 **Team preview:** https://britecyte.github.io/copytest/
 
-The homepage is the Lipoderma email template preview. White nav items are emails
-Launchpad sends. Yellow nav items are unused drafts.
+The homepage is the Lipoderma email template preview. Every nav item is an email
+Launchpad sends.
 
 The previous website redesign preview is in `_archive/2026-08-24-website-preview/`.
 
