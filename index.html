@@ -35,10 +35,15 @@
     <a href="#bank">Tissue-bank packet</a>
     <a href="#ops-order">Staff · new order</a>
     <a href="#new-provider">Staff · new account</a>
+    <a href="#rep-request">Staff · rep request</a>
+    <a href="#rep-received">Rep · request received</a>
+    <a href="#rep-charged">Clinic · charged</a>
+    <a href="#rep-declined">Rep · declined</a>
+    <a href="#needs-attention">Account needs attention</a>
   </nav>
 
   <p class="note" style="margin-top:20px;">
-    These are the emails Launchpad sends. Confirmation sends when payment is received. Fulfillment sends when the order goes to the tissue bank. Tracking sends only when a tracking number is recorded. Delay is sent from the staff order page.
+    These are the emails Launchpad sends, plus the rep-order set that still needs to be wired. Confirmation sends when payment is received. Fulfillment sends when the order goes to the tissue bank. Tracking sends only when a tracking number is recorded. Delay is sent from the staff order page. Rep request emails fire when a field rep submits for a clinic; charged/declined fire after ops reviews it.
   </p>
 
   <div class="page">
@@ -532,6 +537,250 @@
     </table>
   </div>
 
+  <div class="page">
+    <p class="label" id="rep-request">Staff · rep order request</p>
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#f9fbff;">
+      <tr>
+        <td align="center" style="padding:28px 12px;">
+          <table role="presentation" width="560" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:560px;border:1px solid #e1e7ff;border-radius:12px;overflow:hidden;background-color:#ffffff;">
+            <tr>
+              <td style="background-color:#ffffff;padding:22px 28px 18px;border-bottom:3px solid #fd893c;">
+                <img src="assets/logos/lipoderma-logo.svg" alt="Lipoderma" width="140" height="34" style="display:block;border:0;height:34px;width:140px;">
+                <p style="margin:10px 0 0;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#4a5470;">Provider Portal</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="background-color:#ffffff;padding:28px;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;color:#233051;font-size:16px;line-height:1.55;">
+                <p style="margin:0 0 8px;font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#fd893c;">Rep request</p>
+                <p style="margin:0 0 14px;font-size:22px;font-weight:700;letter-spacing:-0.03em;line-height:1.25;color:#233051;">Order #1842 needs approval</p>
+                <p style="margin:0 0 20px;color:#4a5470;">K Hood submitted this for Hatef Aesthetics. No card has been charged.</p>
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-top:1px solid #e1e7ff;border-bottom:1px solid #e1e7ff;">
+                  <tr>
+                    <td style="padding:10px 0;color:#4a5470;width:148px;">Clinic</td>
+                    <td style="padding:10px 0;color:#233051;">Hatef Aesthetics · jenna@danhatefmd.com</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:10px 0;color:#4a5470;">Submitted by</td>
+                    <td style="padding:10px 0;color:#233051;">K Hood · khood@britecyte.com</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:10px 0;color:#4a5470;">Products</td>
+                    <td style="padding:10px 0;color:#233051;">2× Lipoderma · 1.5cc vial</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:10px 0;color:#4a5470;">Delivery</td>
+                    <td style="padding:10px 0;color:#233051;">Tuesday, August 18, 2026</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:10px 0;color:#4a5470;">Total if approved</td>
+                    <td style="padding:10px 0;font-weight:600;color:#233051;">$1,000.00</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:10px 0;color:#4a5470;">Note</td>
+                    <td style="padding:10px 0;color:#233051;">Please comp one if they close this week.</td>
+                  </tr>
+                </table>
+                <p style="margin:20px 0 0;color:#4a5470;">Open the order in the staff dashboard. Approve to charge the clinic card, or decline to cancel with no charge.</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="background-color:#f9fbff;padding:18px 28px;border-top:1px solid #e1e7ff;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;font-size:12px;line-height:1.5;color:#4a5470;">
+                Britecyte · Lipoderma Orders<br>
+                <a href="mailto:needthefat@britecyte.com" style="color:#1e448c;text-decoration:none;">needthefat@britecyte.com</a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="page">
+    <p class="label" id="rep-received">Rep · request received</p>
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#f9fbff;">
+      <tr>
+        <td align="center" style="padding:28px 12px;">
+          <table role="presentation" width="560" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:560px;border:1px solid #e1e7ff;border-radius:12px;overflow:hidden;background-color:#ffffff;">
+            <tr>
+              <td style="background-color:#ffffff;padding:22px 28px 18px;border-bottom:3px solid #fd893c;">
+                <img src="assets/logos/lipoderma-logo.svg" alt="Lipoderma" width="140" height="34" style="display:block;border:0;height:34px;width:140px;">
+                <p style="margin:10px 0 0;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#4a5470;">Rep Portal</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="background-color:#ffffff;padding:28px;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;color:#233051;font-size:16px;line-height:1.55;">
+                <p style="margin:0 0 8px;font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#fd893c;">Request received</p>
+                <p style="margin:0 0 14px;font-size:22px;font-weight:700;letter-spacing:-0.03em;line-height:1.25;color:#233051;">Hi K,</p>
+                <p style="margin:0 0 20px;color:#4a5470;">We have your order request for Hatef Aesthetics. Ops will review it and charge the clinic if they approve. You will get another email either way.</p>
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-top:1px solid #e1e7ff;border-bottom:1px solid #e1e7ff;">
+                  <tr>
+                    <td style="padding:10px 0;color:#4a5470;width:148px;">Request</td>
+                    <td style="padding:10px 0;font-weight:600;color:#233051;">#1842</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:10px 0;color:#4a5470;">Clinic</td>
+                    <td style="padding:10px 0;color:#233051;">Hatef Aesthetics</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:10px 0;color:#4a5470;">Products</td>
+                    <td style="padding:10px 0;color:#233051;">2× Lipoderma · 1.5cc vial</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:10px 0;color:#4a5470;">Requested delivery</td>
+                    <td style="padding:10px 0;color:#233051;">Tuesday, August 18, 2026</td>
+                  </tr>
+                </table>
+                <p style="margin:24px 0 0;font-size:15px;line-height:1.5;color:#4a5470;">Thank you.</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="background-color:#f9fbff;padding:18px 28px;border-top:1px solid #e1e7ff;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;font-size:12px;line-height:1.5;color:#4a5470;">
+                Britecyte · Lipoderma Orders<br>
+                <a href="mailto:needthefat@britecyte.com" style="color:#1e448c;text-decoration:none;">needthefat@britecyte.com</a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="page">
+    <p class="label" id="rep-charged">Clinic · charged after staff approve</p>
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#f9fbff;">
+      <tr>
+        <td align="center" style="padding:28px 12px;">
+          <table role="presentation" width="560" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:560px;border:1px solid #e1e7ff;border-radius:12px;overflow:hidden;background-color:#ffffff;">
+            <tr>
+              <td style="background-color:#ffffff;padding:22px 28px 18px;border-bottom:3px solid #fd893c;">
+                <img src="assets/logos/lipoderma-logo.svg" alt="Lipoderma" width="140" height="34" style="display:block;border:0;height:34px;width:140px;">
+                <p style="margin:10px 0 0;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#4a5470;">Provider Portal</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="background-color:#ffffff;padding:28px;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;color:#233051;font-size:16px;line-height:1.55;">
+                <p style="margin:0 0 8px;font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#fd893c;">Payment complete</p>
+                <p style="margin:0 0 14px;font-size:22px;font-weight:700;letter-spacing:-0.03em;line-height:1.25;color:#233051;">Thank you. Order #1842 is confirmed.</p>
+                <p style="margin:0 0 20px;color:#4a5470;">Your Britecyte representative submitted this order. The card on file for Hatef Aesthetics has been charged. We will email you again when it is sent to our tissue-bank partner.</p>
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-top:1px solid #e1e7ff;border-bottom:1px solid #e1e7ff;">
+                  <tr>
+                    <td style="padding:10px 12px 2px 0;color:#233051;vertical-align:top;">
+                      2× Lipoderma · 1.5cc vial
+                      <div style="margin:2px 0 0;font-size:13px;color:#4a5470;">$450.00 each</div>
+                    </td>
+                    <td style="padding:10px 0 2px;color:#233051;text-align:right;white-space:nowrap;vertical-align:top;">$900.00</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:12px 12px 6px 0;color:#4a5470;">Subtotal</td>
+                    <td style="padding:12px 0 6px;color:#233051;text-align:right;white-space:nowrap;">$900.00</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:6px 12px 6px 0;color:#4a5470;">Shipping · FedEx Priority Overnight</td>
+                    <td style="padding:6px 0;color:#233051;text-align:right;white-space:nowrap;">$100.00</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:10px 12px 10px 0;font-weight:700;color:#233051;">Total paid</td>
+                    <td style="padding:10px 0;font-weight:700;color:#233051;text-align:right;white-space:nowrap;">$1,000.00</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:10px 12px 10px 0;color:#4a5470;border-top:1px solid #e1e7ff;">Requested delivery</td>
+                    <td style="padding:10px 0;color:#233051;text-align:right;border-top:1px solid #e1e7ff;">Tuesday, August 18, 2026</td>
+                  </tr>
+                </table>
+                <p style="margin:24px 0 0;font-size:15px;line-height:1.5;color:#4a5470;">Thank you.</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="background-color:#f9fbff;padding:18px 28px;border-top:1px solid #e1e7ff;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;font-size:12px;line-height:1.5;color:#4a5470;">
+                Britecyte · Lipoderma Orders<br>
+                <a href="mailto:needthefat@britecyte.com" style="color:#1e448c;text-decoration:none;">needthefat@britecyte.com</a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="page">
+    <p class="label" id="rep-declined">Rep · request declined</p>
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#f9fbff;">
+      <tr>
+        <td align="center" style="padding:28px 12px;">
+          <table role="presentation" width="560" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:560px;border:1px solid #e1e7ff;border-radius:12px;overflow:hidden;background-color:#ffffff;">
+            <tr>
+              <td style="background-color:#ffffff;padding:22px 28px 18px;border-bottom:3px solid #fd893c;">
+                <img src="assets/logos/lipoderma-logo.svg" alt="Lipoderma" width="140" height="34" style="display:block;border:0;height:34px;width:140px;">
+                <p style="margin:10px 0 0;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#4a5470;">Rep Portal</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="background-color:#ffffff;padding:28px;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;color:#233051;font-size:16px;line-height:1.55;">
+                <p style="margin:0 0 8px;font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#fd893c;">Request declined</p>
+                <p style="margin:0 0 14px;font-size:22px;font-weight:700;letter-spacing:-0.03em;line-height:1.25;color:#233051;">Hi K,</p>
+                <p style="margin:0 0 20px;color:#4a5470;">Ops declined request #1842 for Hatef Aesthetics. The clinic was not charged. If this still needs to go through, fix the note below and submit again.</p>
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-top:1px solid #e1e7ff;border-bottom:1px solid #e1e7ff;">
+                  <tr>
+                    <td style="padding:10px 0;color:#4a5470;width:148px;">Request</td>
+                    <td style="padding:10px 0;font-weight:600;color:#233051;">#1842</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:10px 0;color:#4a5470;">Clinic</td>
+                    <td style="padding:10px 0;color:#233051;">Hatef Aesthetics</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:10px 0;color:#4a5470;">Reason</td>
+                    <td style="padding:10px 0;color:#233051;">No chargeable card on file for this clinic.</td>
+                  </tr>
+                </table>
+                <p style="margin:24px 0 0;font-size:15px;line-height:1.5;color:#4a5470;">Reply to this email if you need ops to look again.</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="background-color:#f9fbff;padding:18px 28px;border-top:1px solid #e1e7ff;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;font-size:12px;line-height:1.5;color:#4a5470;">
+                Britecyte · Lipoderma Orders<br>
+                <a href="mailto:needthefat@britecyte.com" style="color:#1e448c;text-decoration:none;">needthefat@britecyte.com</a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="page">
+    <p class="label" id="needs-attention">Provider · account needs attention</p>
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#f9fbff;">
+      <tr>
+        <td align="center" style="padding:28px 12px;">
+          <table role="presentation" width="560" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:560px;border:1px solid #e1e7ff;border-radius:12px;overflow:hidden;background-color:#ffffff;">
+            <tr>
+              <td style="background-color:#ffffff;padding:22px 28px 18px;border-bottom:3px solid #fd893c;">
+                <img src="assets/logos/lipoderma-logo.svg" alt="Lipoderma" width="140" height="34" style="display:block;border:0;height:34px;width:140px;">
+                <p style="margin:10px 0 0;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#4a5470;">Provider Portal</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="background-color:#ffffff;padding:28px;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;color:#233051;font-size:16px;line-height:1.55;">
+                <p style="margin:0 0 8px;font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#fd893c;">Needs attention</p>
+                <p style="margin:0 0 14px;font-size:22px;font-weight:700;letter-spacing:-0.03em;line-height:1.25;color:#233051;">Hi Alex,</p>
+                <p style="margin:0 0 16px;color:#4a5470;">Your Lipoderma Launchpad account for Example Aesthetics needs attention before ordering can continue. Our staff will follow up with next steps.</p>
+                <p style="margin:24px 0 0;font-size:15px;line-height:1.5;color:#4a5470;">Thank you.</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="background-color:#f9fbff;padding:18px 28px;border-top:1px solid #e1e7ff;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;font-size:12px;line-height:1.5;color:#4a5470;">
+                Britecyte · Lipoderma Orders<br>
+                <a href="mailto:needthefat@britecyte.com" style="color:#1e448c;text-decoration:none;">needthefat@britecyte.com</a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+
   <p class="note">End of preview.</p>
 </body>
 </html>
+
