@@ -10,14 +10,22 @@
     .picker { position: sticky; top: 0; z-index: 2; display: flex; gap: 8px; flex-wrap: wrap; padding: 12px 16px; background: #0e2652; }
     .picker a { color: #fff; text-decoration: none; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; padding: 8px 10px; border: 1px solid #ffffff33; border-radius: 8px; }
     .picker a:hover { background: #1e448c; }
-    .label { max-width: 560px; margin: 28px auto 8px; font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #4a5470; }
-    .note { max-width: 560px; margin: 0 auto 24px; font-size: 13px; color: #4a5470; }
-    .page { max-width: 640px; margin: 0 auto; }
+    .label { margin: 28px 0 8px; font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #4a5470; }
+    .note { max-width: 980px; margin: 0 auto 24px; padding: 0 12px; font-size: 13px; color: #4a5470; }
+    .page { max-width: 980px; margin: 0 auto; display: grid; grid-template-columns: 220px minmax(0, 640px); column-gap: 28px; }
+    .page .label { grid-column: 1 / -1; }
+    .page > table { grid-column: 2; }
+    .email-context { grid-column: 1; grid-row: 2; align-self: start; margin: 28px 0 0; padding: 16px; border-left: 3px solid #fd893c; background: #f9fbff; color: #4a5470; font-size: 12px; line-height: 1.55; }
+    .email-context strong { display: block; margin-bottom: 5px; color: #233051; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; }
     @page { size: letter; margin: 0.55in; }
+    @media (max-width: 760px) {
+      .page { display: block; max-width: 640px; padding: 0 12px; }
+      .email-context { margin: 0 0 12px; }
+    }
     @media print {
-      .picker, .note { display: none !important; }
+      .picker, .note, .email-context { display: none !important; }
       body { background: #f9fbff; }
-      .page { break-after: page; page-break-after: always; }
+      .page { display: block; break-after: page; page-break-after: always; }
       .page:last-of-type { break-after: auto; page-break-after: auto; }
       .label { margin-top: 0; }
     }
@@ -39,6 +47,8 @@
     <a href="#rep-received">Rep · request received</a>
     <a href="#rep-charged">Clinic · charged</a>
     <a href="#rep-declined">Rep · declined</a>
+    <a href="#billing-setup">Billing setup</a>
+    <a href="#clinic-welcome">Clinic welcome</a>
     <a href="#needs-attention">Account needs attention</a>
   </nav>
 
@@ -75,6 +85,82 @@
                   <a href="#" style="color:#1e448c;word-break:break-all;">https://lipoderma-launchpad.onrender.com/password_resets/example</a>
                 </p>
                 <p style="margin:24px 0 0;font-size:15px;line-height:1.5;color:#4a5470;">Thank you.</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="background-color:#f9fbff;padding:18px 28px;border-top:1px solid #e1e7ff;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;font-size:12px;line-height:1.5;color:#4a5470;">
+                Britecyte · Lipoderma Orders<br>
+                <a href="mailto:needthefat@britecyte.com" style="color:#1e448c;text-decoration:none;">needthefat@britecyte.com</a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="page">
+    <p class="label" id="clinic-welcome">Clinic · welcome to Launchpad</p>
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#f9fbff;">
+      <tr>
+        <td align="center" style="padding:28px 12px;">
+          <table role="presentation" width="560" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:560px;border:1px solid #e1e7ff;border-radius:12px;overflow:hidden;background-color:#ffffff;">
+            <tr>
+              <td style="background-color:#ffffff;padding:22px 28px 18px;border-bottom:3px solid #fd893c;">
+                <img src="assets/logos/lipoderma-logo.svg" alt="Lipoderma" width="140" height="34" style="display:block;border:0;height:34px;width:140px;">
+                <p style="margin:10px 0 0;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#4a5470;">Provider Portal</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="background-color:#ffffff;padding:28px;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;color:#233051;font-size:16px;line-height:1.55;">
+                <p style="margin:0 0 8px;font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#fd893c;">Welcome to Launchpad</p>
+                <p style="margin:0 0 14px;font-size:22px;font-weight:700;letter-spacing:-0.03em;line-height:1.25;color:#233051;">Everything your clinic needs to order Lipoderma.</p>
+                <p style="margin:0 0 18px;color:#4a5470;">Welcome. Lipoderma Launchpad is your clinic’s secure place to complete onboarding, access training, and manage orders.</p>
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-top:1px solid #e1e7ff;border-bottom:1px solid #e1e7ff;">
+                  <tr><td style="padding:12px 0;color:#4a5470;width:28px;vertical-align:top;font-weight:700;">1</td><td style="padding:12px 0;color:#233051;"><strong>Complete your clinic information</strong><br><span style="color:#4a5470;">Add your practice details, credentials, and delivery address.</span></td></tr>
+                  <tr><td style="padding:12px 0;color:#4a5470;width:28px;vertical-align:top;font-weight:700;">2</td><td style="padding:12px 0;color:#233051;"><strong>Complete the required training</strong><br><span style="color:#4a5470;">Review the materials before placing your first order.</span></td></tr>
+                  <tr><td style="padding:12px 0;color:#4a5470;width:28px;vertical-align:top;font-weight:700;">3</td><td style="padding:12px 0;color:#233051;"><strong>Use the ordering options that work for your clinic</strong><br><span style="color:#4a5470;">Place orders directly in Launchpad at any time. You can also securely save a payment method, then text or email your Britecyte representative whenever you want them to place an order for your clinic.</span></td></tr>
+                </table>
+                <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin-top:22px;">
+                  <tr><td style="background-color:#1e448c;border-radius:8px;"><a href="#" style="display:inline-block;padding:12px 22px;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;color:#ffffff;text-decoration:none;">Open Launchpad</a></td></tr>
+                </table>
+                <p style="margin:20px 0 0;font-size:13px;line-height:1.5;color:#4a5470;">Saving a payment method does not create a charge. Your representative cannot view, use, or charge the card; Britecyte handles payment securely through Stripe.</p>
+                <p style="margin:20px 0 0;color:#4a5470;">Questions? Reply to this email and our team will help.</p>
+              </td>
+            </tr>
+            <tr><td style="background-color:#f9fbff;padding:18px 28px;border-top:1px solid #e1e7ff;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;font-size:12px;line-height:1.5;color:#4a5470;">Britecyte · Lipoderma Launchpad<br><a href="mailto:needthefat@britecyte.com" style="color:#1e448c;text-decoration:none;">needthefat@britecyte.com</a></td></tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="page">
+    <p class="label" id="billing-setup">Provider · secure billing setup</p>
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#f9fbff;">
+      <tr>
+        <td align="center" style="padding:28px 12px;">
+          <table role="presentation" width="560" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:560px;border:1px solid #e1e7ff;border-radius:12px;overflow:hidden;background-color:#ffffff;">
+            <tr>
+              <td style="background-color:#ffffff;padding:22px 28px 18px;border-bottom:3px solid #fd893c;">
+                <img src="assets/logos/lipoderma-logo.svg" alt="Lipoderma" width="140" height="34" style="display:block;border:0;height:34px;width:140px;">
+                <p style="margin:10px 0 0;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#4a5470;">Provider Portal</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="background-color:#ffffff;padding:28px;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;color:#233051;font-size:16px;line-height:1.55;">
+                <p style="margin:0 0 8px;font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#fd893c;">Secure billing setup</p>
+                <p style="margin:0 0 14px;font-size:22px;font-weight:700;letter-spacing:-0.03em;line-height:1.25;color:#233051;">Save a payment method for Hatef Aesthetics</p>
+                <p style="margin:0 0 20px;color:#4a5470;">Your clinic can place orders directly in Launchpad at any time. You can also use the secure Stripe link below to save a card, then text or email your sales rep whenever you want them to place an order for your clinic.</p>
+                <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td style="background-color:#1e448c;border-radius:8px;">
+                      <a href="#" style="display:inline-block;padding:12px 22px;font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;color:#ffffff;text-decoration:none;">Save payment method</a>
+                    </td>
+                  </tr>
+                </table>
+                <p style="margin:24px 0 0;color:#4a5470;">No charge is made during setup. Britecyte does not store your full card number, and your sales rep cannot view, use, or charge the card.</p>
+                <p style="margin:20px 0 0;color:#4a5470;">Thank you,<br>Britecyte</p>
               </td>
             </tr>
             <tr>
@@ -184,13 +270,13 @@
                 <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-top:1px solid #e1e7ff;border-bottom:1px solid #e1e7ff;">
                   <tr>
                     <td style="padding:10px 12px 2px 0;color:#233051;vertical-align:top;">
-                      2× Lipoderma · 1.5cc vial
+                      2× Lipoderma · 1.5 cc vial
                       <div style="margin:2px 0 0;font-size:13px;color:#4a5470;">$450.00 each</div>
                     </td>
                     <td style="padding:10px 0 2px;color:#233051;text-align:right;white-space:nowrap;vertical-align:top;">$900.00</td>
                   </tr>
                   <tr>
-                    <td style="padding:10px 12px 2px 0;color:#233051;vertical-align:top;">1× Lipoderma · 1.5cc vial (complimentary)</td>
+                    <td style="padding:10px 12px 2px 0;color:#233051;vertical-align:top;">1× Lipoderma · 1.5 cc vial (complimentary)</td>
                     <td style="padding:10px 0 2px;color:#233051;text-align:right;white-space:nowrap;vertical-align:top;">$0.00</td>
                   </tr>
                   <tr>
@@ -246,8 +332,8 @@
                   <tr>
                     <td style="padding:10px 0;color:#4a5470;width:148px;vertical-align:top;">Products</td>
                     <td style="padding:10px 0;color:#233051;">
-                      <div style="margin:0 0 4px;">2× Lipoderma · 1.5cc vial</div>
-                      <div style="margin:0 0 4px;">1× Lipoderma · 1.5cc vial (complimentary)</div>
+                      <div style="margin:0 0 4px;">2× Lipoderma · 1.5 cc vial</div>
+                      <div style="margin:0 0 4px;">1× Lipoderma · 1.5 cc vial (complimentary)</div>
                     </td>
                   </tr>
                   <tr>
@@ -340,7 +426,7 @@
                   </tr>
                   <tr>
                     <td style="padding:10px 0;color:#4a5470;">Products</td>
-                    <td style="padding:10px 0;color:#233051;">2× Lipoderma · 1.5cc vial</td>
+                    <td style="padding:10px 0;color:#233051;">2× Lipoderma · 1.5 cc vial</td>
                   </tr>
                   <tr>
                     <td style="padding:10px 0;color:#4a5470;">Requested delivery</td>
@@ -462,7 +548,7 @@
                   </tr>
                   <tr>
                     <td style="padding:10px 0;color:#4a5470;">Products</td>
-                    <td style="padding:10px 0;color:#233051;">2× Lipoderma · 1.5cc vial, 1× Lipoderma · 10cc vial</td>
+                    <td style="padding:10px 0;color:#233051;">2× Lipoderma · 1.5 cc vial, 1× Lipoderma · 10 cc vial</td>
                   </tr>
                   <tr>
                     <td style="padding:10px 0;color:#4a5470;">Delivery</td>
@@ -565,7 +651,7 @@
                   </tr>
                   <tr>
                     <td style="padding:10px 0;color:#4a5470;">Products</td>
-                    <td style="padding:10px 0;color:#233051;">2× Lipoderma · 1.5cc vial</td>
+                    <td style="padding:10px 0;color:#233051;">2× Lipoderma · 1.5 cc vial</td>
                   </tr>
                   <tr>
                     <td style="padding:10px 0;color:#4a5470;">Delivery</td>
@@ -623,7 +709,7 @@
                   </tr>
                   <tr>
                     <td style="padding:10px 0;color:#4a5470;">Products</td>
-                    <td style="padding:10px 0;color:#233051;">2× Lipoderma · 1.5cc vial</td>
+                    <td style="padding:10px 0;color:#233051;">2× Lipoderma · 1.5 cc vial</td>
                   </tr>
                   <tr>
                     <td style="padding:10px 0;color:#4a5470;">Requested delivery</td>
@@ -665,7 +751,7 @@
                 <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-top:1px solid #e1e7ff;border-bottom:1px solid #e1e7ff;">
                   <tr>
                     <td style="padding:10px 12px 2px 0;color:#233051;vertical-align:top;">
-                      2× Lipoderma · 1.5cc vial
+                      2× Lipoderma · 1.5 cc vial
                       <div style="margin:2px 0 0;font-size:13px;color:#4a5470;">$450.00 each</div>
                     </td>
                     <td style="padding:10px 0 2px;color:#233051;text-align:right;white-space:nowrap;vertical-align:top;">$900.00</td>
@@ -781,6 +867,38 @@
   </div>
 
   <p class="note">End of preview.</p>
+  <script>
+    const emailContexts = {
+      reset: ["Provider-facing", "Sent when a clinic user requests a password reset. The secure reset link expires after two hours."],
+      "clinic-welcome": ["Clinic-facing · proposed", "A proposed welcome email for new clinics. It explains onboarding, training, direct ordering, and optional rep-assisted ordering."],
+      "billing-setup": ["Clinic-facing", "Sent by staff when a clinic needs to securely save a card for rep-assisted orders. No charge is made during setup."],
+      invite: ["Provider-facing", "Sent when staff invites a clinic user. The recipient sets a password, then finishes any outstanding onboarding steps."],
+      approved: ["Provider-facing", "Sent after staff approves the clinic for ordering. It confirms that direct ordering is available."],
+      confirmation: ["Provider-facing", "Sent immediately after a clinic pays for an order through Launchpad."],
+      fulfillment: ["Provider-facing", "Sent when staff releases an order to the tissue-bank partner for fulfillment."],
+      tracking: ["Provider-facing", "Sent after staff records a shipment tracking number."],
+      delay: ["Provider-facing", "Sent manually by staff when fulfillment needs a revised delivery timeline."],
+      bank: ["Tissue-bank partner", "Internal fulfillment request with the required order details and attached packet."],
+      "ops-order": ["Staff-facing", "Internal notification that a clinic-paid order is ready for staff to send to the tissue bank."],
+      "new-provider": ["Staff-facing", "Internal notification that a new provider account was created and needs staff review."],
+      "rep-request": ["Staff-facing", "Internal notification when a rep submits an order. No card has been charged until staff approves it."],
+      "rep-received": ["Rep-facing", "Sent to the rep after their order is submitted. It confirms the order is waiting for staff review."],
+      "rep-charged": ["Clinic-facing", "Sent after staff approves a rep-submitted order and successfully charges the saved card."],
+      "rep-declined": ["Rep-facing", "Sent to the rep if staff declines their submitted order. The clinic is not charged."],
+      "needs-attention": ["Provider-facing", "Sent when required onboarding information is still incomplete and ordering cannot yet be approved."]
+    }
+
+    document.querySelectorAll(".page").forEach((page) => {
+      const label = page.querySelector(".label[id]")
+      const context = label && emailContexts[label.id]
+      if (!context) return
+
+      const aside = document.createElement("aside")
+      aside.className = "email-context"
+      aside.innerHTML = `<strong>${context[0]}</strong>${context[1]}`
+      label.insertAdjacentElement("afterend", aside)
+    })
+  </script>
 </body>
 </html>
 
