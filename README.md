@@ -17,10 +17,8 @@ at `/copy_review/`, not in this repo.
 To refresh this homepage after mailer copy changes:
 
 ```bash
-# from launchpadNew
+# from launchpadNew (writes public/copy_review/* and this repo’s index.html when ../copytest exists)
 bin/rails copy_review:regenerate_email_preview
-# then copy public/copy_review/email_preview.html → this repo’s index.html
-# with logo paths rewritten to assets/logos/
 ```
 
 The previous website redesign preview is in `_archive/2026-08-24-website-preview/`.
